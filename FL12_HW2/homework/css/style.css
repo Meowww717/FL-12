@@ -1,0 +1,177 @@
+/*
+
+write your code here
+
+*/
+@media print {
+
+    .tm-sidebar,
+    .tm-team-img,
+    #about,
+    .gallery-container,
+    .carousel-indicators,
+    #ideas+.tm-content-box {
+        display: none;
+    }
+
+    #home,
+    .tm-content-box {
+        margin-bottom: 0;
+    }
+
+    body,
+    .tm-main-content {
+        padding-top: 0;
+    }
+
+    .tm-team-description-container {
+        max-width: 100%;
+        text-align: center;
+        padding: 0;
+    }
+
+    .heading {
+        text-align: center;
+    }
+
+    .heading h2 {
+        color: lightskyblue;
+    }
+
+    .heading ol {
+        list-style-type: none;
+    }
+
+    .heading ol>li {
+        width: 50%;
+        text-align: left;
+        margin: 0 auto;
+    }
+
+    .heading ol>li:nth-child(2n+1) {
+        text-align: right;
+    }
+
+    .heading>.padding-medium {
+        padding: 20px;
+    }
+
+    .blocks>.tm-team-description-container>p:last-child {
+        font-style: italic;
+        letter-spacing: 5px;
+    }
+
+    #tmCarousel {
+        padding: 20px;
+    }
+}
+
+.tm-main-nav a:hover {
+    background-color: lightskyblue;
+    color: #fff;
+}
+
+.tm-banner {
+    background: linear-gradient(to left, burlywood, lightskyblue);
+    ;
+    margin: 20px;
+    padding: 20px;
+}
+
+.tm-banner-inner {
+    border: none;
+    background-color: white;
+}
+
+.tm-banner-text {
+    text-shadow: 4px 4px 2px #333;
+    position: relative;
+    right: -300px;
+    animation: go-left 3s 1 alternate;
+}
+
+@keyframes go-left {
+    from {
+        right: -300px;
+    }
+
+    to {
+        right: 0;
+    }
+}
+
+.flex-2-col {
+    display: flex;
+}
+
+.tm-team-description-container {
+    display: flex;
+}
+
+.tm-team-description-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.tm-team-description-container > p {
+    text-indent: 20px;
+}
+
+.box-bg:hover {
+    background-color: lightgrey;
+    color: lightskyblue;
+}
+
+.heading h2 {
+    color: lightskyblue;
+    text-align: center;
+}
+
+.heading ol {
+    list-style-type: lower-alpha;
+}
+
+.heading ol li:before {
+    content: ">";
+}
+
+.heading ol li:nth-child(1):after, .heading ol li:nth-child(3):after {
+    content: "New";
+    color: red;
+    position: relative;
+    top: -5px;
+}
+
+.heading ol li:nth-child(1) a, .heading ol li:nth-child(3) a {
+    text-decoration: underline;
+}
+
+.blocks > .tm-team-description-container h2 {
+    width: 100%;
+    text-align: left;
+}
+
+.blocks > .tm-team-description-container > p:last-child {
+    word-spacing: 10px;
+    letter-spacing: 5px;
+}
+
+.blocks ul.gallery-container li {
+    padding: 10px;
+}
+
+.blocks ul.gallery-container li:nth-child(2n+1) {
+    background-color: lightskyblue;
+    color: white;
+}
+
+.blocks ul.gallery-container li div p::first-letter {
+    font-weight: bold;
+}
+
+.tm-section-description {
+    padding: 25px;
+    line-height: 30px;
+}
