@@ -1,0 +1,369 @@
+/*
+ * Feel free to change name of colors if you need it
+ * Feel free to add new colors if you need it
+ */
+body {
+  font-family: roboto;
+}
+
+/* Your styles go here */
+@media (min-width: 769px) {
+  body {
+    margin: 0 auto;
+    max-width: 1400px;
+    background-color: #0b192f;
+  }
+
+  h4 {
+    font-weight: normal;
+    margin: 0;
+  }
+
+  header {
+    position: fixed;
+    z-index: 3;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 1400px;
+    height: 70px;
+    padding: 0 20px;
+    background-color: #024161;
+  }
+
+  .logo {
+    font-size: 20px;
+    color: #fff;
+  }
+
+  .logo span {
+    color: #9d27b0;
+  }
+
+  header nav {
+    height: 100%;
+  }
+
+  header nav a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 60px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+  }
+
+  header nav a:hover {
+    background-color: #1f52a4;
+  }
+
+  .main-picture {
+    height: 300px;
+    margin-top: 90px;
+    margin-bottom: 15px;
+    background-image: url(../img/post0.jpg);
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+    color: #fff;
+  }
+
+  .main-picture a {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    color: #fff;
+    text-decoration: none;
+    padding: 30px;
+    box-sizing: border-box;
+    font-size: 40px;
+  }
+
+  .main-picture p {
+    font-size: 14px;
+    max-width: 70%;
+  }
+
+  section {
+    display: flex;
+    width: 100%;
+  }
+
+  article {
+    display: flex;
+    flex-direction: column;
+    width: 74%;
+    margin-right: 1%;
+  }
+
+  article div.posts {
+    height: 300px;
+    display: flex;
+    cursor: pointer;
+  }
+
+  article div.posts:nth-child(2n+2) {
+    flex-direction: row-reverse;
+    text-align: end;
+  }
+
+  article div.posts img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  article .photo {
+    width: 49.5%;
+    height: 100%;
+  }
+
+  article .info {
+    position: relative;
+    width: 50.5%;
+    height: 100%;
+  }
+
+  article .info .date {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    color: #fff;
+    z-index: 0;
+    right: 0;
+    padding: 15px;
+    font-size: 40px;
+  }
+
+  article .info .date span {
+    font-size: 24px;
+  }
+
+  article div.posts:nth-child(2n+2) .info .date {
+    left: 0;
+    right: auto;
+  }
+
+  article div.posts a {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    color: #fff;
+    text-decoration: none;
+    padding: 40px;
+    box-sizing: border-box;
+    font-size: 40px;
+  }
+
+  article div.posts p {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  article div.posts:nth-child(3n+1) a {
+    background-color: #9d27b0;
+    opacity: 0.9;
+  }
+
+  article div.posts:nth-child(3n+2) a {
+    background-color: #9bb800;
+    opacity: 0.9;
+  }
+
+  article div.posts:nth-child(3n+3) a {
+    background-color: #ed5120;
+    opacity: 0.9;
+  }
+
+  article div.posts img:hover,
+  article div.posts a:hover {
+    opacity: 0.7;
+  }
+
+  article div.post-5 {
+    height: 150px;
+    display: flex;
+    cursor: pointer;
+  }
+
+  article div.post-5 .info {
+    width: 100%;
+  }
+
+  article div.posts:last-child a {
+    background: #2d95bb;
+  }
+
+  article div.posts:last-child a p {
+    width: 94%;
+  }
+
+  aside {
+    width: 25%;
+  }
+
+  aside img {
+    width: 100%;
+    height: 40%;
+    object-fit: cover;
+  }
+
+  aside .news-post {
+    background-color: white;
+    margin-bottom: 15px;
+  }
+
+  aside .news-post a {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    color: black;
+    text-decoration: none;
+    padding: 36px;
+    box-sizing: border-box;
+    font-size: 30px;
+  }
+
+  aside .news-post p {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+    margin-top: 20px;
+    padding: 0 20px;
+    background-color: #024161;
+    font-size: 12px;
+    color: white;
+    box-sizing: border-box;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  nav {
+    display: none;
+  }
+
+  header {
+    height: 80px;
+    flex-direction: column-reverse;
+    justify-content: space-around;
+  }
+
+  header:after {
+    content: '\205e';
+  }
+
+  .main-picture {
+    margin-top: 100px;
+  }
+
+  article {
+    width: 65%;
+  }
+
+  aside {
+    width: 34%;
+  }
+
+  article div.posts {
+    height: 550px;
+    flex-direction: column;
+  }
+
+  article .photo {
+    width: 100%;
+    height: 55%;
+  }
+
+  article .info {
+    position: relative;
+    width: 100%;
+    height: 45%;
+  }
+
+  article div.posts:nth-child(2n+2) {
+    flex-direction: column;
+    text-align: start;
+  }
+
+  article div.posts:nth-child(2n+2) .info .date {
+    right: 0;
+  }
+
+  
+  article div.post-5 {
+    height: 400px;
+  }
+
+  article div.post-5 .info  {
+    height: 100%;
+  }
+
+  article div.posts:last-child a {
+    justify-content: start;
+  }
+
+  article .info .date {
+    bottom: 0;
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+  }
+
+  footer {
+    flex-direction: column;
+    height: 80px;
+    text-align: center;
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  body {
+    min-width: 480px;
+  }
+
+  section {
+    flex-direction: column;
+  }
+
+  article,
+  aside {
+    width: 100%;
+  }
+
+  article div.posts .info .date {
+    right: 0 !important;
+    top: 0 !important;
+    left: auto !important;
+    bottom: auto;
+    width: auto;
+  }
+
+  article div.posts:last-child .info .date {
+    bottom: 0;
+    top: auto !important;
+    width: 100%;
+    text-align: center;
+  }
+}
