@@ -3,7 +3,7 @@
 
 class Fighter {
 
-    constructor(name, damage, health, strength, agility) {
+    constructor(name, damage, strength, agility, health) {
       this.name = name;
       this.damage = damage;
       this.strength = strength;
@@ -12,47 +12,45 @@ class Fighter {
     }
 
     getName() {
-        return this._name;
+        return this.name;
     }
   
     getDamage() {
-        return this._damage;
-    }
-
-    getHealth() {
-        return this._health;
+        return this.damage;
     }
 
     getStrength() {
-        return this._strength;
+        return this.strength;
     }
 
     getAgility() {
-        return this._agility;
+        return this.agility;
+    }
+
+    getHealth() {
+        return this.health;
     }
 
     attack(fighter) {
-        const rang = 100 - (fighter.getStrength + fighter.getAgility);    
+        const rang = 100 - (fighter.getStrength() + fighter.getAgility());    
         const rand = Math.floor(Math.random() * 101);
 
         if ( rand <= rang ) {
-            fighter.getHealth = fighter.getHealth - fighter.getDamage;
-            console.log(`${this.getName} makes ${fighter.getDamage} damage to ${fighter.getName}`);
-
-            console.log(fighter.getHealth);
+            fighter.health = fighter.getHealth() - fighter.getDamage();
+            console.log(`${this.getName()} makes ${fighter.getDamage()} damage to ${fighter.getName()}`);
         } else {
-            console.log(`${fighter.getName} attack missed`);
+            console.log(`${fighter.getName()} attack missed`);
         }
         
     } 
 
     logCombatHistory() {
-        console.log(`Name: ${this.getName}, Wins: 0, Losses: 0`);
+        console.log(`Name: ${this.getName()}, Wins: ${this.win}, Losses: ${this.losses}`);
     }
 
     heal(hp) {
-        if ( this.getHealth < hp ) {
-            this.getHealth = hp;
+        if ( this.getHealth() < hp ) {
+            this.health = hp;
         }
     }
 
@@ -67,10 +65,19 @@ class Fighter {
     addLoss() {
         this.losses += 1;
     }
-
-  
   }
 
   function battle(fighter1, fighter2) {
-    fighter1.attack(fighter2);
+
+    while (fighter1.getHealth() > 0 && fighter2.getHealth() > 0) {
+        fighter1.attack(fighter2);
+        fighter2.attack(fighter1);
+    }
+
+    fighter1.getHealth() > 0 ? console.log(`${fighter1.getName()} has won!`) : 
+        console.log(`${fighter1.getName()} is dead and can't fight!`);  
+        
+    fighter2.getHealth() > 0 ? console.log(`${fighter2.getName()} has won!`) : 
+        console.log(`${fighter2.getName()} is dead and can't fight!`);
+    
   }
