@@ -1,0 +1,33 @@
+/* Todo: your styles go here*/
+
+.tree {
+    width: 40%;
+    margin: 0 auto;
+}
+
+.tree ul {
+    margin-left: 10px;
+}
+
+.tree li {
+    list-style-type: none;
+    cursor: pointer;
+    display: table;
+    width: 100%;
+    direction: rtl;
+}
+
+.material-icons {
+    font-size: 20px;
+    margin-right: 2px;
+    color: rgb(245, 245, 55);
+}
+
+.avi > .material-icons {
+    color: silver;
+}
+
+.empty {
+    font-style: italic;
+}
+
